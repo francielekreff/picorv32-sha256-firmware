@@ -21,8 +21,8 @@ main.lds: sections.lds
 
 
 main.elf: main.lds start.s main.c
-	$(CROSS)gcc $(CFLAGS) -march=rv32im -mabi=ilp32 -Wl,--build-id=none,-Bstatic,-T,main.lds,-Map,main.map,--strip-debug -ffreestanding -nostdlib \
-	-o main.elf start.s main.c
+	$(CROSS)gcc $(CFLAGS) -march=rv32im -mabi=ilp32 -Wl,--build-id=none,-Bstatic,-T,main.lds,-Map,main.map,--strip-debug -nostdlib -ffreestanding \
+	-o main.elf start.s main.c uart.c
 
 
 main.hex: main.elf

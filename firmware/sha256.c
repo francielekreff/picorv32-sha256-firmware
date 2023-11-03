@@ -37,9 +37,9 @@ void sha256_block_dump(SHA256_CTX *ctx, unsigned char data[]){
 	}
 	block_string[BLOCK_STRING_SIZE] = '\0';
 
-	printf("Block: ");
-	printf("%s", block_string);
-	printf("\n");
+	//printf("Block: ");
+	//printf("%s", block_string);
+	//printf("\n");
 }
 
 
